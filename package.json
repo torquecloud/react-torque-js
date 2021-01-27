@@ -1,6 +1,6 @@
 {
   "name": "@torquecloud/torque-react-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -29,9 +29,9 @@
   },
   "homepage": "https://github.com/torquecloud/torque-react-js#readme",
   "devDependencies": {
+    "@torquecloud/torque-js": "^1.1.0",
     "@types/jest": "^26.0.20",
     "@types/react": "^17.0.0",
-    "@torquecloud/torque-js": "^1.0.0",
     "jest": "^26.6.3",
     "prettier": "2.2.1",
     "react": "^17.0.0",
@@ -39,9 +39,8 @@
     "typescript": "^4.1.3"
   },
   "peerDependencies": {
-    "react": "^17.0.0",
-    "@torquecloud/torque-js": "^1.0.0"
+    "@torquecloud/torque-js": "^1.1.0",
+    "react": "^17.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
