@@ -1,23 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { Torque, TorqueUser } from '@torquecloud/torque-js/src'
-import { UnknownTorqueUser } from '@torquecloud/torque-js/src/torque-user/torque-user'
+import React, { useEffect, useState } from 'react'
+import { Torque, TorqueUser, UnknownTorqueUser } from '@torquecloud/torque-js'
+import { TorqueContext } from './torque-context'
 
-type TorqueContextType = {
-  torque: Torque | null
-  torqueUser: TorqueUser
-}
-
-export const TorqueContext =
-  React.createContext<TorqueContextType>({
-    torque: null,
-    torqueUser: new UnknownTorqueUser(),
-  })
-
-export const useTorque =
-  (): TorqueContextType =>
-    useContext(TorqueContext)
-
-type TorqueProviderProps = {
+export type TorqueProviderProps = {
   torque: Promise<Torque>
   children: React.ReactNode
 }
@@ -28,7 +13,7 @@ export const TorqueProvider =
      children,
    }: TorqueProviderProps) => {
     const [torque, setTorque] = useState<Torque | null>(null)
-    const [torqueUser, setTorqueUser] = useState<TorqueUser>(new UnknownTorqueUser())
+    const [torqueUser, setTorqueUser] = useState<TorqueUser>(UnknownTorqueUser.Instance)
 
     function refreshTorqueUser() {
       if (torque) {
