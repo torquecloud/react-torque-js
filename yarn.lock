@@ -479,10 +479,8 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@torquecloud/torque-js@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@torquecloud/torque-js/-/torque-js-1.0.0.tgz#f6571194ca1ea72710b18136b5c038a1023e115b"
-  integrity sha512-KkRDR55fFguC/oHAR01T1YZny/YIa/Rg8R0pC70sDpbxFI0gjROSyDvVcBLtxQvIa13o5+kE4w/CU5j75bh4iA==
+"@torquecloud/torque-js@file:../torque-js":
+  version "1.1.0"
   dependencies:
     zod "^2.0.0-beta.30"
 
